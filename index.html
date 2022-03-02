@@ -15,9 +15,10 @@
         <div class="navbar">
             <div class="logo">
                 <img src="images/logo.jpg" width="125px" alt="">
+                
             </div>
             <nav>
-                <ul>
+                <ul id="MenuItems">
                     <li><a href="">Home</a></li>
                     <li><a href="">Products</a></li>
                     <li><a href="">About</a></li>
@@ -26,6 +27,7 @@
                 </ul>
             </nav>
             <img src="images/cart.png" width="30px" height="30px" alt="">
+            <img src="images/menu.jpg" width="125px" alt="" class="menu-icon" onclick="menutoggle()">
         </div>
         <div class="row">
             <div class="col-2">
@@ -162,7 +164,7 @@
                 <img src="images/paypalm.png" alt="">
             </div>
             <div class="col-5">
-                <img src="images/paypalm.png" alt="">
+                <img src="images/paypalm.png" alt="" >
             </div>
             
         </div>
@@ -176,5 +178,19 @@
         </div>
     </div>
 </div>
+<!--Javascript for toggle menu-->
+<script>
+    var MenuItems=document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight=="0px"){
+            MenuItems.style.maxHeight="200px";
+        }
+        else{
+            MenuItems.style.maxHeight="0px";
+        }
+    }
+</script>
 </body>
 </html>
